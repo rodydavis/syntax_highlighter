@@ -17,29 +17,31 @@ class SyntaxHighlighterStyle {
     this.constantStyle,
   });
 
-  static SyntaxHighlighterStyle lightThemeStyle() {
+  static SyntaxHighlighterStyle lightThemeStyle([TextStyle style]) {
+    final TextStyle _style = style ?? TextStyle();
     return SyntaxHighlighterStyle(
-      baseStyle: const TextStyle(color: Color(0xFF000000)),
-      numberStyle: const TextStyle(color: Color(0xFF1565C0)),
-      commentStyle: const TextStyle(color: Color(0xFF9E9E9E)),
-      keywordStyle: const TextStyle(color: Color(0xFF9C27B0)),
-      stringStyle: const TextStyle(color: Color(0xFF43A047)),
-      punctuationStyle: const TextStyle(color: Color(0xFF000000)),
-      classStyle: const TextStyle(color: Color(0xFF512DA8)),
-      constantStyle: const TextStyle(color: Color(0xFF795548)),
+      baseStyle: _style.copyWith(color: Color(0xFF000000)),
+      numberStyle: _style.copyWith(color: Color(0xFF1565C0)),
+      commentStyle: _style.copyWith(color: Color(0xFF9E9E9E)),
+      keywordStyle: _style.copyWith(color: Color(0xFF9C27B0)),
+      stringStyle: _style.copyWith(color: Color(0xFF43A047)),
+      punctuationStyle: _style.copyWith(color: Color(0xFF000000)),
+      classStyle: _style.copyWith(color: Color(0xFF512DA8)),
+      constantStyle: _style.copyWith(color: Color(0xFF795548)),
     );
   }
 
-  static SyntaxHighlighterStyle darkThemeStyle() {
+  static SyntaxHighlighterStyle darkThemeStyle([TextStyle style]) {
+    final TextStyle _style = style ?? TextStyle();
     return SyntaxHighlighterStyle(
-      baseStyle: const TextStyle(color: Color(0xFFFFFFFF)),
-      numberStyle: const TextStyle(color: Color(0xFF1565C0)),
-      commentStyle: const TextStyle(color: Color(0xFF9E9E9E)),
-      keywordStyle: const TextStyle(color: Color(0xFF80CBC4)),
-      stringStyle: const TextStyle(color: Color(0xFF009688)),
-      punctuationStyle: const TextStyle(color: Color(0xFFFFFFFF)),
-      classStyle: const TextStyle(color: Color(0xFF009688)),
-      constantStyle: const TextStyle(color: Color(0xFF795548)),
+      baseStyle: _style.copyWith(color: Color(0xFFFFFFFF)),
+      numberStyle: _style.copyWith(color: Color(0xFF1565C0)),
+      commentStyle: _style.copyWith(color: Color(0xFF9E9E9E)),
+      keywordStyle: _style.copyWith(color: Color(0xFF80CBC4)),
+      stringStyle: _style.copyWith(color: Color(0xFF009688)),
+      punctuationStyle: _style.copyWith(color: Color(0xFFFFFFFF)),
+      classStyle: _style.copyWith(color: Color(0xFF009688)),
+      constantStyle: _style.copyWith(color: Color(0xFF795548)),
     );
   }
 
